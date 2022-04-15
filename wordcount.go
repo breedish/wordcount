@@ -8,6 +8,9 @@ import (
 	"strings"
 )
 
+type struct1 struct {
+}
+
 func main() {
 	args := os.Args
 	if len(args) < 2 {
@@ -18,6 +21,9 @@ func main() {
 }
 
 func countWords(str string) int {
+	if len(strings.TrimSpace(str)) == 0 {
+		return 0
+	}
 	return len(strings.Split(str, " "))
 }
 
